@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["Server/BlazorWebAsmDockerTest.Server.csproj", "Server/"]
 COPY ["Client/BlazorWebAsmDockerTest.Client.csproj", "Client/"]
-COPY ["Shared/BlazorWebAsmDockerTest.Shared.csproj", "Shared/"]
+#COPY ["Shared/BlazorWebAsmDockerTest.Shared.csproj", "Shared/"]
 RUN dotnet restore "Server/BlazorWebAsmDockerTest.Server.csproj"
 COPY . .
 WORKDIR "/src/Server"
